@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: mubashertudmmrepo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mubashertudmmrepo 
+    spec:
+      containers:
+        - name: mubashertudmmrepo 
+          image: mmcontainerregistry.azurecr.io/mubashertudmmrepo
+          ports:
+          - containerPort: 8080
